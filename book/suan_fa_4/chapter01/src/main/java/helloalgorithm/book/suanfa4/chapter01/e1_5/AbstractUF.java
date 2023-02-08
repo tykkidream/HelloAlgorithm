@@ -1,9 +1,12 @@
 package helloalgorithm.book.suanfa4.chapter01.e1_5;
 
 public abstract class AbstractUF implements UF {
-    private int[] data;
+    protected int[] data;
 
-    private int count;
+    protected int count;
+
+    protected int monitReadTimes;
+    protected int monitWriteTimes;
 
     public AbstractUF(int dataSize) {
         data = new int[dataSize];
@@ -12,7 +15,11 @@ public abstract class AbstractUF implements UF {
         }
 
         count = data.length;
+    }
 
+    @Override
+    public int find(int p) {
+        return data[p];
     }
 
     @Override
@@ -23,5 +30,9 @@ public abstract class AbstractUF implements UF {
     @Override
     public int count() {
         return count;
+    }
+
+    public void monit() {
+        System.out.println(String.format("读次数：%s  写次数：%s", monitReadTimes, monitWriteTimes));
     }
 }
