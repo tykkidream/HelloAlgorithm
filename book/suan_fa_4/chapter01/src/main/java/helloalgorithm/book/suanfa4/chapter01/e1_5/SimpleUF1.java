@@ -44,7 +44,7 @@ public class SimpleUF1 extends AbstractUF {
 
     }
 
-    private static void ca(UF uf, int p, int q) {
+    public static void ca(UF uf, int p, int q) {
         boolean connected1 = uf.connected(p, q);
 
         if (connected1) {
