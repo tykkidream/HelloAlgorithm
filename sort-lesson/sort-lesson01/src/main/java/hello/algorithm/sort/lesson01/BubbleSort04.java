@@ -20,7 +20,7 @@ public class BubbleSort04 {
 
     public static void bubbleSort(int[] data){
 
-        for (int i = data.length; i > 0; i--) {
+        for (int i = data.length; i > 1; i--) {
             for (int j = 0, k = 1; k < i; j = k, k++) {
                 if (data[j] < data[k]) {
                     int temp = data[j];
