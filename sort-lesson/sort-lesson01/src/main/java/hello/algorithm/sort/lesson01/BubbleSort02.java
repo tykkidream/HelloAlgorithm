@@ -7,7 +7,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
  * 冒泡排序
  * Created by Tykkidream on 2017/10/17.
  */
-public class BubbleSort {
+public class BubbleSort02 {
     public static void main(String[] args) {
         int[] data = new int[]{5,2,7,8,1,5,62,31,5,34};
 
