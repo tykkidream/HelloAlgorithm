@@ -22,6 +22,7 @@ public class BubbleSort04 {
 
         for (int i = data.length; i > 1; i--) {
             for (int j = 0, k = 1; k < i; j = k, k++) {
+                // 从大到小排序
                 if (data[j] < data[k]) {
                     int temp = data[j];
                     data[j] = data[k];
