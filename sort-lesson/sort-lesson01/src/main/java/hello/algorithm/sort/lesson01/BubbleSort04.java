@@ -21,13 +21,19 @@ public class BubbleSort04 {
     public static void bubbleSort(int[] data){
 
         for (int i = data.length; i > 1; i--) {
+            boolean has = false;
             for (int j = 0, k = 1; k < i; j = k, k++) {
                 // 从大到小排序
                 if (data[j] < data[k]) {
                     int temp = data[j];
                     data[j] = data[k];
                     data[k] = temp;
+                    has = true;
                 }
+            }
+
+            if (!has) {
+                break;
             }
         }
 

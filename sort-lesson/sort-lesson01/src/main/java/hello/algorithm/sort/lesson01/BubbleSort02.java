@@ -21,6 +21,7 @@ public class BubbleSort02 {
     public static void bubbleSort(int[] data){
 
         for (int i = data.length - 1; i > 0; i--) {
+            boolean has = false;
             for (int j = 0; j < i; j++) {
                 int a = data[j];
                 int b = data[j+1];
@@ -28,7 +29,12 @@ public class BubbleSort02 {
                 if (a > b) {
                     data[j] = b;
                     data[j+1]  = a;
+                    has = true;
                 }
+            }
+
+            if (!has) {
+                break;
             }
         }
 

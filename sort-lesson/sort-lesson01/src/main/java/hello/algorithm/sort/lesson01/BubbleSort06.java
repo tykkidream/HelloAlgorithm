@@ -3,25 +3,29 @@ package hello.algorithm.sort.lesson01;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
-/**
- * 冒泡排序
- * Created by Tykkidream on 2017/10/17.
- */
-public class BubbleSort05 {
+public class BubbleSort06 {
     public static void main(String[] args) {
-        int[] data = new int[]{5,2,7,8,1,5,62,31,5,34};
+        // 最好情况
+        int[] bestCase = new int[]{ 1,2,5,5,5,7,8,31,34,62 };
+        // 最坏情况
+        int[] worstCase = new int[]{ 62,34,31,8,7,5,5,5,2,1 };
 
-        bubbleSort(data);
+        bubbleSort(bestCase);
+        bubbleSort(worstCase);
+
+        // 最好情况 9 次， 也就是 n-1 次
+        // 最坏情况 45 次， 也就是 (n^2-n)/2 次
+
     }
 
     public static void bubbleSort(int[] data){
         int count = 0;
 
         for (int i = data.length; i > 1; i--) {
-            boolean has = false;
             int j = 0, k = 1;
+            boolean has = false;
             for (; k < i; j = k, k++) {
-                if (data[j] < data[k]) {
+                if (data[j] > data[k]) {
                     int temp = data[j];
                     data[j] = data[k];
                     data[k] = temp;
@@ -35,5 +39,7 @@ public class BubbleSort05 {
                 break;
             }
         }
+
+        System.out.println("============================================================");
     }
 }
