@@ -7,7 +7,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
  * 插入排序—直接插入排序
  * Created by Tykkidream on 2017/10/17.
  */
-public class StraightInsertionSort01 {
+public class InsertionSort01 {
 
     public static void insertSort(int a[], int n)
     {
