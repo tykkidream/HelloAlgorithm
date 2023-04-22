@@ -4,7 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
 /**
- * 冒泡排序
+ * 冒泡排序的分析
+ *
+ * - 比较次数和交换（或移动）次数
+ *
  * Created by Tykkidream on 2017/10/17.
  */
 public class BubbleSort05 {
@@ -15,7 +18,10 @@ public class BubbleSort05 {
     }
 
     public static void bubbleSort(int[] data){
-        int count = 0;
+        // 比较次数
+        int compareCount = 0;
+        // 移动次数
+        int moveCount = 0;
 
         for (int i = data.length; i > 1; i--) {
             boolean has = false;
@@ -26,10 +32,11 @@ public class BubbleSort05 {
                     data[j] = data[k];
                     data[k] = temp;
                     has = true;
+                    moveCount++;
                 }
-                count++;
+                compareCount++;
             }
-            System.out.println("count : " + count +"\tj : " + j + "\tk : " + k + "\t i : "+ i+ "\t" + JSON.toJSONString(data, SerializerFeature.PrettyFormat));
+            System.out.println("compareCount : " + compareCount + "\tmoveCount : " + moveCount + "\tj : " + j + "\tk : " + k + "\t i : "+ i+ "\t" + JSON.toJSONString(data, SerializerFeature.PrettyFormat));
 
             if (!has) {
                 break;

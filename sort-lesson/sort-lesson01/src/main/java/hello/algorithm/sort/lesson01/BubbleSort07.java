@@ -3,6 +3,9 @@ package hello.algorithm.sort.lesson01;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
+/**
+ * 这个是极客时间里，作者给出的写法
+ */
 public class BubbleSort07 {
 
     public static void main(String[] args) {
@@ -24,7 +27,10 @@ public class BubbleSort07 {
             return;
         }
 
-        int count = 0;
+        // 比较次数
+        int compareCount = 0;
+        // 移动次数
+        int moveCount = 0;
 
         for (int i = 0; i < data.length; ++i) {
             // 提前退出冒泡循环的标志位
@@ -36,20 +42,25 @@ public class BubbleSort07 {
                     int tmp = data[j];
                     data[j] = data[j+1];
                     data[j+1] = tmp;
-                    flag = true;  // 表示有数据交换
+                    flag = true;  // 表示发生了数据交换
+                    moveCount++;
                 }
 
-                count++;
+                compareCount++;
             }
 
-            System.out.println("count : " + count +"\tj : " + j + "\t i : "+ i+ "\t" + JSON.toJSONString(data, SerializerFeature.PrettyFormat));
+            System.out.println("compareCount : " + compareCount + "\tmoveCount : " + moveCount + "\tflag : " + convert(flag) + "\tj : " + j + "\t i : "+ i+ "\t" + JSON.toJSONString(data, SerializerFeature.PrettyFormat));
 
             if (!flag) {
-                break;  // 没有数据交换，提前退出
+                break;  // 没发生数据交换，提前退出
             }
         }
 
-        System.out.println("====================================================");
+        System.out.println("========================================================================================");
+    }
+
+    private static String convert(boolean bool) {
+        return bool ? "Yes" : "No";
     }
 
 }
