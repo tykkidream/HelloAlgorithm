@@ -21,8 +21,8 @@ public class BubbleSort06 {
         bubbleSort(bestCase);
         bubbleSort(worstCase);
 
-        // 最好情况 9 次， 也就是 n-1 次
-        // 最坏情况 45 次， 也就是 (n^2-n)/2 次
+        // 最好情况比较 9 次， 也就是 n-1 次，移动 0 次。
+        // 最坏情况比较 45 次， 也就是 (n^2-n)/2 次，移动 0 次。
 
     }
 
