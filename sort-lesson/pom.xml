@@ -13,6 +13,7 @@
         <module>sort-lesson01</module>
         <module>sort-lesson02</module>
         <module>sort-lesson03</module>
+        <module>sort-lesson04</module>
     </modules>
 
     <dependencies>
