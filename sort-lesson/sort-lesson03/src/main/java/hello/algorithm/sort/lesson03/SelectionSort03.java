@@ -27,9 +27,11 @@ public class SelectionSort03 {
                 }
             }
 
-            int temp = data[j];
-            data[j] = data[i];
-            data[i] = temp;
+            if (j > i) {
+                int temp = data[j];
+                data[j] = data[i];
+                data[i] = temp;
+            }
         }
     }
 }

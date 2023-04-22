@@ -26,10 +26,13 @@ public class SelectionSort04 {
                 count++;
             }
 
-            int temp = data[j];
-            data[j] = data[i];
-            data[i] = temp;
-
+            if (j > i) {
+                int temp = data[j];
+                data[j] = data[i];
+                data[i] = temp;
+            } else {
+                break;
+            }
 
             System.out.println("count : " + count +"\tj : " + j + "\tk : " + k + "\t i : "+ i+ "\t" + JSON.toJSONString(data, SerializerFeature.PrettyFormat));
         }
