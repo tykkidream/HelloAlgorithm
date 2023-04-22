@@ -48,6 +48,7 @@ public class MergeSort01 {
             int left  = data[left_begin];
             int right = data[right_begin];
 
+            // 正序
             if (left <= right) {
                 temp[i] = left;
                 left_begin++;
