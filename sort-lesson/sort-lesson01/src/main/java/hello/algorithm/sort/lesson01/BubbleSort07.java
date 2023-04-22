@@ -13,9 +13,11 @@ public class BubbleSort07 {
         int[] bestCase = new int[]{ 1,2,5,5,5,7,8,31,34,62 };
         // 最坏情况
         int[] worstCase = new int[]{ 62,34,31,8,7,5,5,5,2,1 };
+        int[] data = new int[]{5,2,7,8,1,5,62,31,5,34};
 
         bubbleSort(bestCase);
         bubbleSort(worstCase);
+        bubbleSort(data);
 
         // 最好情况比较 9 次， 也就是 n-1 次，移动 0 次。
         // 最坏情况比较 45 次， 也就是 (n^2-n)/2 次，移动 42 次。
