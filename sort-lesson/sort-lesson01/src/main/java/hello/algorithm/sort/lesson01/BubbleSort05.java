@@ -15,6 +15,8 @@ public class BubbleSort05 {
         int[] data = new int[]{5,2,7,8,1,5,62,31,5,34};
 
         bubbleSort(data);
+
+        // 比较 45 次， 移动 29 次。
     }
 
     public static void bubbleSort(int[] data){
