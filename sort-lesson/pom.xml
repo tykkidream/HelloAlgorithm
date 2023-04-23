@@ -17,6 +17,7 @@
         <module>sort-lesson05</module>
         <module>sort-lesson06</module>
         <module>sort-lesson07</module>
+        <module>sort-lesson08</module>
     </modules>
 
     <dependencies>
