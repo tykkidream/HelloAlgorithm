@@ -22,27 +22,7 @@ public class ShellSort02 {
     }
 
     private static void shellSort(int[] data, int group) {
-        if (group == 0) {
-            return;
-        }
 
-        for (int i = 0; i <= group; i++) {
-            for (int j = group; j < data.length; j = j + group) {
-                for (int k = j - group, l = j; k > -1; l = k, k = k - group) {
-                    int a = data[k];
-                    int b = data[l];
-
-                    if (a > b) {
-                        data[l] = a;
-                        data[k] = b;
-                    } else {
-                        break;
-                    }
-                }
-            }
-        }
-
-        shellSort(data, group / 2);
     }
 
 }

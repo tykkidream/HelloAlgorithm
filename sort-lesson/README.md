@@ -7,3 +7,4 @@
 - [sort-lesson04](sort-lesson04) 归并排序
 - [sort-lesson05](sort-lesson05) 快速排序
 - [sort-lesson06](sort-lesson06) 希尔排序
+- [sort-lesson07](sort-lesson07) 计数排序
